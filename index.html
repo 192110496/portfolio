@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Portfolio - Maruboyina Arshasri</title>
+
+  <!-- AOS Animate on Scroll -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', sans-serif;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #111;
+      color: #fff;
+    }
+
+    .container {
+      display: flex;
+      min-height: 100vh;
+    }
+
+    .sidebar {
+      width: 250px;
+      background-color: #222;
+      padding: 30px 20px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      position: fixed;
+      height: 100vh;
+      overflow-y: auto;
+    }
+
+    .profile-img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      margin-bottom: 15px;
+      object-fit: cover;
+    }
+
+    .name {
+      color: #f7c000;
+      font-size: 18px;
+      text-align: center;
+    }
+
+    .role {
+      color: #ccc;
+      font-size: 14px;
+      margin-bottom: 30px;
+    }
+
+    .nav-links {
+      list-style: none;
+      width: 100%;
+    }
+
+    .nav-links li {
+      margin: 10px 0;
+    }
+
+    .nav-links a {
+      display: block;
+      text-decoration: none;
+      background-color: #444;
+      color: #fff;
+      padding: 10px;
+      text-align: center;
+      border-radius: 6px;
+      transition: background 0.3s;
+    }
+
+    .nav-links a:hover,
+    .nav-links a.active {
+      background-color: #f7c000;
+      color: #000;
+    }
+
+    .content {
+      margin-left: 250px;
+      padding: 60px;
+      flex: 1;
+      background-color: #1a1a1a;
+    }
+
+    section {
+      padding: 50px 0;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 20px;
+    }
+
+    #typewriter-text {
+      color: #f7c000;
+    }
+
+    .summary {
+      line-height: 1.6;
+      font-size: 16px;
+      max-width: 700px;
+    }
+
+    #certifications ul {
+      list-style: none;
+      padding-left: 0;
+      margin-top: 10px;
+    }
+
+    #certifications li {
+      margin-bottom: 10px;
+      padding-left: 10px;
+      position: relative;
+    }
+
+    #certifications li::before {
+      content: "✔";
+      color: gold;
+      position: absolute;
+      left: 0;
+    }
+
+    .about-btn {
+      margin-top: 25px;
+      padding: 10px 20px;
+      background-color: #f7c000;
+      color: #000;
+      border: none;
+      font-weight: bold;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .about-btn:hover {
+      background-color: #fff100;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <img src="image.jpg" alt="Profile" class="profile-img">
+      <h2 class="name">Maruboyina Arshasri</h2>
+      <p class="role">Data Science</p>
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#home" class="active">Home</a></li>
+          <li><a href="#about">About</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#portfolio">Portfolio</a></li>
+          <li><a href="#certifications">Certifications</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="content">
+      <!-- Home -->
+      <section id="home">
+        <h1 id="typewriter-text"></h1>
+        <p class="summary" data-aos="fade-up" data-aos-duration="1000">
+          I am passionate about Data Science, a growing field that focuses on using data to solve real-world problems.
+          As a fresher, I am building a strong foundation in data analysis, statistics, and machine learning to uncover
+          insights and help businesses make better decisions.
+        </p>
+        <a href="#about"><button class="about-btn">About Me</button></a>
+      </section>
+
+      <!-- About -->
+      <section id="about">
+        <h1 data-aos="fade-right">About Me</h1>
+        <p data-aos="fade-up">
+          I'm Maruboyina Arshasri, a Computer Science student with a strong interest in Data Science and Analytics.
+          I love working with data, finding patterns, and turning numbers into useful insights.
+          I have hands-on experience with Python, Excel, and Power BI through academic projects,
+          and I'm eager to start my career as a Data Analyst.
+        </p>
+      </section>
+
+      <!-- Education -->
+      <section id="education">
+        <h1 data-aos="fade-right">Education</h1>
+        <p data-aos="fade-up">
+          <strong>Bachelor of Technology in Computer Science</strong><br>
+          Saveetha School of Engineering, 2021 – 2025<br>
+          CGPA: 8.45
+        </p>
+        <p data-aos="fade-up">
+          <strong>Narayana Junior College</strong>, 2021<br>
+          Percentage: 90.4%
+        </p>
+        <p data-aos="fade-up">
+          <strong>Narayana E.M School</strong>, 2019<br>
+          CGPA: 9.3
+        </p>
+      </section>
+
+      <!-- Portfolio -->
+      <section id="portfolio">
+        <h1 data-aos="fade-right">Portfolio</h1>
+        <p data-aos="fade-up">
+          • <strong>Advertisement Click Prediction using KNN & SVM</strong><br>
+          <cite>
+            Developed a classification model to predict ad clicks using KNN and SVM. Dataset included features like daily time on site,
+            age, income, and internet usage. Preprocessed data, trained models, and evaluated performance using accuracy and precision.
+          </cite>
+        </p>
+      </section>
+
+      <!-- Certifications -->
+      <section id="certifications">
+  <h1 data-aos="fade-right">Certifications</h1>
+  <ul data-aos="fade-up">
+    <li>
+      📄 <strong><a href="https://ude.my/UC-99a0f0c3-0eb7-4ebc-96fc-b5b11448a4b1" target="_blank">
+        Learn JAVA Programming – Beginner to Master (Udemy)
+      </a></strong>
+    </li>
+    <li>
+      📄 <strong><a href="https://drive.google.com/file/d/1LbuEVaUjKbc5SKsjIoSa9hmenCtaGYIQ/view?usp=drivesdk"  target="_blank">
+        Oracle Cloud Infrastructure 2024 – Generative AI Certified Professional
+      </a></strong>
+    </li>
+    <li>
+      📄 <strong><a href="https://drive.google.com/file/d/1L_vueXq6z3lrxfoQvQLikjSCKbnvCJRf/view?usp=drivesdk" target="_blank">
+        View Multicloud Network Associate Certificate
+      </a></strong>
+
+    </li>
+      
+  </ul>
+</section>
+
+
+      <!-- Contact -->
+      <section id="contact">
+        <h1 data-aos="fade-right">Contact</h1>
+        <p data-aos="fade-up">
+          📧 Email: arshasri1609@gmail.com<br>
+          📱 Phone: +91 85559 49329<br>
+          🔗 LinkedIn:
+          <a href="https://www.linkedin.com/in/arsha-sri-1b2379280/" target="_blank">
+            View Profile
+          </a>
+        </p>
+      </section>
+    </main>
+  </div>
+
+  <!-- AOS Scroll Animation Script -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+
+  <!-- Typewriter Effect -->
+  <script>
+    const text = "Hi there! I'm Maruboyina Arshasri";
+    let index = 0;
+
+    function typeWriter() {
+      if (index < text.length) {
+        document.getElementById("typewriter-text").innerHTML += text.charAt(index);
+        index++;
+        setTimeout(typeWriter, 70);
+      }
+    }
+
+    window.onload = typeWriter;
+  </script>
+
+  <!-- Active Link Highlight on Scroll -->
+  <script>
+    const sections = document.querySelectorAll("section");
+    const navLinks = document.querySelectorAll(".nav-links a");
+
+    window.addEventListener("scroll", () => {
+      let current = "";
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+        if (pageYOffset >= sectionTop - sectionHeight / 3) {
+          current = section.getAttribute("id");
+        }
+      });
+
+      navLinks.forEach((link) => {
+        link.classList.remove("active");
+        if (link.getAttribute("href").includes(current)) {
+          link.classList.add("active");
+        }
+      });
+    });
+  </script>
+
+</body>
+</html>
